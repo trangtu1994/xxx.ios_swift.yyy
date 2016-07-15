@@ -46,7 +46,6 @@ class MenuViewController : UIViewController{
             let menuWidth = self.width
             let menuHeight = self.height
             let menuY = 0 + topMargin
-            
             if isAnimationMoving {
                 UIView.animateWithDuration(durationShowing, animations: { () -> Void in
                self.view.frame=CGRectMake(0, menuY , menuWidth , menuHeight )
@@ -65,18 +64,20 @@ class MenuViewController : UIViewController{
                 UIView.animateWithDuration(durationShowing, animations: { () -> Void in
                     self.view.frame = self.initFrame()
                     }, completion:{(finished) -> Void in
-                        self.view.removeFromSuperview()
-                        self.removeFromParentViewController()
+                       
                     })
             } else  {
                 self.view.frame = initFrame()
-                self.view.removeFromSuperview()
-                self.removeFromParentViewController()
             }
             isShowing = false
         }
     }
     
+    
+    func removeFromSuper() {
+        self.view.removeFromSuperview()
+        self.removeFromParentViewController()
+    }
     
     
     func addToSuper (controller : UIViewController) {

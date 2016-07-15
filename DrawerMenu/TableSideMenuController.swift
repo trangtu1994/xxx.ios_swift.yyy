@@ -9,7 +9,8 @@
 import UIKit
 class TableSideMenuController : MenuViewController {
 
-    
+    var items = [MenuItem] ()
+    var typeOfItemCell = "menuCell"
     @IBOutlet weak var menuTitle: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
@@ -25,9 +26,7 @@ class TableSideMenuController : MenuViewController {
     }
     
     func sideMenuTitle (title : String) {
-    
-            menuTitle.text = title
-        
+        menuTitle.text = title
     }
     
 }
@@ -38,17 +37,22 @@ extension TableSideMenuController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return items.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath)
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier(typeOfItemCell, forIndexPath: indexPath) as! MenuItemCell
+        cell.addData(items[indexPath.row])
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.close()
-        print("select item at \(indexPath)")
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! IconMenuItem
+        cell.itemClicked(items[indexPath.row].title)
     }
+}
+
+protocol MenuItemClick {
+    
 }
