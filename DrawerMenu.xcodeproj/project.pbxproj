@@ -23,6 +23,7 @@
 		F400BC8F1D3CD0D600E54DAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F400BC881D3CD0D600E54DAA /* LaunchScreen.storyboard */; };
 		F400BC901D3CD0D600E54DAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F400BC8A1D3CD0D600E54DAA /* Main.storyboard */; };
 		F400BC911D3CD0D600E54DAA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F400BC8C1D3CD0D600E54DAA /* Info.plist */; };
+		F449F0E91D3F1A4700BFC620 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F449F0E81D3F1A4700BFC620 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		F400BC8B1D3CD0D600E54DAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F400BC8C1D3CD0D600E54DAA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F41DFD361D38868300E0E2E3 /* DrawerMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawerMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F449F0E71D3F1A4700BFC620 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		F449F0E81D3F1A4700BFC620 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,7 @@
 		F41DFD381D38868300E0E2E3 /* DrawerMenu */ = {
 			isa = PBXGroup;
 			children = (
+				F449F0E61D3F1A4700BFC620 /* SideMenuLib */,
 				F400BC851D3CD0D600E54DAA /* Supports */,
 				F400BC7D1D3CD07F00E54DAA /* Model */,
 				F400BC7F1D3CD07F00E54DAA /* View */,
@@ -133,6 +137,15 @@
 				F400BC651D3CCD8700E54DAA /* Utils */,
 			);
 			path = DrawerMenu;
+			sourceTree = "<group>";
+		};
+		F449F0E61D3F1A4700BFC620 /* SideMenuLib */ = {
+			isa = PBXGroup;
+			children = (
+				F449F0E71D3F1A4700BFC620 /* SWRevealViewController.h */,
+				F449F0E81D3F1A4700BFC620 /* SWRevealViewController.m */,
+			);
+			path = SideMenuLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F449F0E91D3F1A4700BFC620 /* SWRevealViewController.m in Sources */,
 				F400BC8D1D3CD0D600E54DAA /* AppDelegate.swift in Sources */,
 				F400BC671D3CCD8D00E54DAA /* Device.swift in Sources */,
 				F400BC721D3CCF9300E54DAA /* ApplicationManager.swift in Sources */,
